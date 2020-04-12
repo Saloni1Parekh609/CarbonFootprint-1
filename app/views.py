@@ -12,6 +12,7 @@ def homepage(request):
 def signup(request):
     if request.method == "POST":
         form = SignUpForm(request.POST)
+        print(form.errors)
         if form.is_valid():
             user = form.save()
             password = form.cleaned_data.get('password1')

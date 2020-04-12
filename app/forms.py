@@ -9,9 +9,9 @@ COUNTRY = [
 ]
 
 DIET = [
-    ('Heavy_Meat_Eater', 'Heavy_Meat'),
-    ('Medium_Meat_Eater', 'Low_Meat'),
-    ('Low_Meat_Eater', 'Low_Meat'),
+    ('Heavy_Meat_Eater', 'Heavy Meat Eater'),
+    ('Medium_Meat_Eater', 'Low Meat Eater'),
+    ('Low_Meat_Eater', 'Low Meat Eater'),
     ('Vegetarian', 'Vegeterian'),
     ('Vegan', 'Vegan')
 ]
@@ -37,4 +37,4 @@ class SignUpForm(UserCreationForm, forms.ModelForm):
 
     class Meta:
         model = MyUser
-        fields = ('email', 'name', 'age', 'country', 'diet', 'fuel', 'scooter', 'family', 'electricity')
+        fields = ('email', 'name', 'age', 'family', 'scooter', 'country', 'diet', 'fuel', 'electricity')

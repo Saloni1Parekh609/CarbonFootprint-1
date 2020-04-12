@@ -1,6 +1,75 @@
-<h1>Sign up</h1>
-<form method="post">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <button type="submit">Sign up</button>
-</form>
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/signup.css'  %}">
+{% endblock %}
+
+{% block content %}
+    <div class="hero-image">
+        <form method="post">
+        {% csrf_token %}
+            <div class="row1">
+                <p class="header">Sign Up</p>
+                <p class="description">Enter your details</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 first">
+                    <div class="element">
+                        Email<br>
+                        {{ form.email }}
+                    </div>
+                    <div class="element">
+                        Password<br>
+                        {{ form.password1 }}
+                    </div>
+                    <div class="element">
+                        Confirm password<br>
+                        {{ form.password2 }}
+                    </div>
+                </div>
+                <div class="col-lg-3 first">
+                    <div class="element">
+                        Name<br>
+                        {{ form.name }}
+                    </div>
+                    <div class="element">
+                        Age<br>
+                        {{ form.age }}
+                    </div>
+                    <div class="element">
+                        Number of family members<br>
+                        {{ form.family }}
+                    </div>
+                    <div class="element">
+                        Do you own a scooter:
+                        {{ form.scooter }}
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="element">
+                        Country:<br>
+                        {{ form.country  }}
+                    </div>
+                    <div class="element">
+                        Diet:<br>
+                        {{ form.diet }}
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="element">
+                        Fuel:<br>
+                        {{ form.fuel }}
+                    </div>
+                    <div class="element">
+                        Electricity:<br>
+                        {{ form.electricity }}
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper">
+                <button class="btn btn-primary btn-lg" style="padding-top: 10px;" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+{%  endblock %}
