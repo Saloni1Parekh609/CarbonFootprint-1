@@ -16,51 +16,41 @@ body,html {
   background-position:center;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
   color: #f1f1f1;
 }
 
-.row1 {
-  text-align: center;
+.hero-text h1{
+  font-size: 5em;
 }
 
-.row1 .header {
-  font-size: 4.5em;
+.hero-text p {
+  font-size:1.5em;
 }
 
-.row1 .description {
-  font-size: 2.5em
-}
-
-.col-lg-3.first {
-  text-align: center;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-li {
-  list-style: none;
+hr {
+  border-top: 2px solid white;
+  padding-bottom: 20px;
 }
 
 .element {
-  padding-bottom: 20px;
-  font-size: 1.2em;
+  padding-bottom: 15px;
+  font-size: 1.4em;
 }
 
-#id_email,#id_password1, #id_password2,
-#id_name, #id_age, #id_family {
-  border-radius: 25px;
-  padding: 6px 6px;
-}
-
-.wrapper {
-  text-align: center;
+#id_username,#id_password {
+  border-radius: 30px;
+  padding: 8px 8px;
 }
 
 button {
-  font-weight: 20px;
-  left: 50%;
+  margin-top: 20px;
 }

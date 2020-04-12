@@ -1,6 +1,31 @@
-<h1>Login</h1>
-<form method="post">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <button type="submit">Login</button>
-</form>
+{% extends 'app/base.html' %}
+{%  load static %}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{%  static 'css/login.css' %}">
+{%  endblock %}
+
+{% block content %}
+<div class="hero-image">
+    <div class="hero-text">
+        <h1>Log in to EARTH-X</h1>
+        <p>Continue your journey..</p>
+        <hr>
+        <form method="post">
+        {%  csrf_token %}
+            <div class="element">
+                Enter Email<br>
+                {{ form.username }}
+            </div>
+            <div class="element">
+                Enter Password<br>
+                {{ form.password }}
+            </div>
+
+            <div class="wrapper">
+                <button class="btn btn-outline-primary btn-lg">Log In</button>
+            </div>
+        </form>
+    </div>
+</div>
+{%  endblock  %}
