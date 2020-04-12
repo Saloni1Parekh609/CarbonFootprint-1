@@ -7,8 +7,8 @@
 ## Steps to run the project
 
 1. Open the project folder
-2. Install and open pipenv using <i>pipenv shell</i>
-3. Install requirements using <i>pipenv install</i>
-4. Run migrations using <i>python manage.py makemigrations</i> and <i>python manage.py migrate</i>
-5. Create a superuser to using <i>python manage.py createsuperuser</i> and fill in details
-6. Finally, run using <i>python manage.py runserver</i>
+2. Install and open pipenv using <strong><i>pipenv shell</i></strong>
+3. Install requirements using <strong><i>pipenv install</i></strong>
+4. Run migrations using <strong><i>python manage.py makemigrations</i></strong> and <strong><i>python manage.py migrate</i></strong>
+5. Create a superuser to using <strong><i>python manage.py createsuperuser</i></strong> and fill in details
+6. Finally, run using <strong><i>python manage.py runserver</i></strong>
