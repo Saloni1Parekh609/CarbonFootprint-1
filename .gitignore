@@ -1,3 +1,2 @@
-/app/views.py
-/app/models.py
-/db.sqlite3
+.idea
+app/migrations

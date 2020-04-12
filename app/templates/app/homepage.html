@@ -1,0 +1,25 @@
+{% extends 'app/base.html' %}
+{%  load static %}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{%  static 'css/signup.css' %}">
+{%  endblock %}
+
+{% block content %}
+<div class="hero-image">
+    <div class="hero-text">
+        <h1>Welcome to EARTH-X</h1>
+        <p>Take your first step towards saving this planet..</p>
+        <hr>
+        {% if user.is_authenticated == False %}
+            <a class="btn btn-primary btn-lg" href="{%  url 'signup' %}">Signup Now!</a>
+            <p style="padding-top: 10px; font-size:2em">OR</p>
+        {% endif %}
+        {%  if user.is_authenticated %}
+            <a class="btn btn-danger btn-lg" href="{% url 'logout' %}">Logout</a>
+        {%  else %}
+            <a class="btn btn-primary btn-lg" href="{% url 'login' %}">Login here!</a>
+        {% endif %}
+    </div>
+</div>
+{%  endblock  %}
