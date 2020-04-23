@@ -51,6 +51,11 @@ class UserAdmin(BaseUserAdmin):
         (
             'Personal Details',
             {'fields': ('name', 'age', 'country', 'diet', 'fuel', 'scooter', 'family', 'electricity')}),
+        ('Footprint calculations',
+         {'fields': (
+             'footprint', 'time', 'meal', 'journey_time', 'compost', 'solar', 'points', 'consumer_type',
+             'consumer_number',
+             'bun')}),
         ('Permissions', {'fields': ('is_admin',)}),
     )
     add_fieldsets = (

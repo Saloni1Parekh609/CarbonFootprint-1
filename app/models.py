@@ -32,16 +32,16 @@ class MyUser(AbstractBaseUser):
     family = models.IntegerField(null=True)
     electricity = models.CharField(max_length=255, default="One-Three")
 
-    """footprint = models.FloatField(default=0)
-    time = models.FloatField(default=0)
-    meal = models.FloatField(default=0)
-    journey_time = models.IntegerField(default=0)
-    compost = models.IntegerField(default=0)
-    solar = models.IntegerField(default=0)
-    points = models.IntegerField(default=0)
-    consumer_type = models.CharField(max_length=100, default="")
-    consumer_number = models.IntegerField(default=0)
-    bun = models.IntegerField(default=0)"""
+    footprint = models.FloatField(null=True)
+    time = models.FloatField(null=True)
+    meal = models.FloatField(null=True)
+    journey_time = models.IntegerField(null=True)
+    compost = models.IntegerField(null=True)
+    solar = models.IntegerField(null=True)
+    points = models.IntegerField(null=True)
+    consumer_type = models.CharField(max_length=255, null=True)
+    consumer_number = models.IntegerField(null=True)
+    bun = models.IntegerField(null=True)
 
     objects = MyUserManager()
 
@@ -60,30 +60,3 @@ class MyUser(AbstractBaseUser):
     @property
     def is_staff(self):
         return self.is_admin
-
-
-"""
-COUNTRY_FIELD = (
-        (1, 'India'),
-        (2, 'USA'),
-        (3, 'UK'),
-    )
-    DIET_FIELD = (
-        (1, 'Heavy_meat'),
-        (2, 'Medium_meat'),
-        (3, 'Low_meat'),
-        (4, 'Pescatarians'),
-        (5, 'Vegetarian'),
-        (6, 'Vegan'),
-    )
-    FUEL = (
-        ('die', 'Diesel'),
-        ('pet', 'Petrol'),
-        ('none', 'None'),
-    )
-    ELECTRICITY = (
-        (1, 'one-two'),
-        (3, 'three-five'),
-        (6, 'six')
-    )
-    """

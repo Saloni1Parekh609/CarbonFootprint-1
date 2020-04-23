@@ -10,9 +10,7 @@ urlpatterns = [
     path('logout', auth_views.LogoutView.as_view(), name='logout'),
 ]
 
-
 """
-path('forms/', views.forms, name='forms'),
 path('mahadiscom/', views.mahadiscomf, name='mahadiscomf'),
 path('indoor/', views.myview, name='my_view_name'),
 path('outdoor/', views.myoutview, name='my_out_view_name'),
