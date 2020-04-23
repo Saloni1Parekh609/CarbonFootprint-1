@@ -12,3 +12,4 @@
 4. Run migrations using <strong><i>python manage.py makemigrations</i></strong> and <strong><i>python manage.py migrate</i></strong>
 5. Create a superuser to using <strong><i>python manage.py createsuperuser</i></strong> and fill in details
 6. Finally, run using <strong><i>python manage.py runserver</i></strong>
+7. Exit pipenv <strong><i>exit</i></strong>
